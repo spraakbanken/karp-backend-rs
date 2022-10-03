@@ -9,4 +9,5 @@ pub struct EntryDto<E> {
     pub discarded: bool,
     pub version: u32,
     pub last_modified: DateTime,
+    pub message: String,
 }
