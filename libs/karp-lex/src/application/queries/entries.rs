@@ -1,6 +1,7 @@
 use crate::DateTime;
 
 #[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
+#[serde(rename_all = "camelCase")]
 pub struct EntryDto<E> {
     pub entity_id: Option<uuid::Uuid>,
     pub last_modified_by: String,
