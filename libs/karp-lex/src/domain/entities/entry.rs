@@ -3,10 +3,10 @@ use crate::DateTime;
 #[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Entry<E> {
-    entity_id: uuid::Uuid,
+    entity_id: ulid::Ulid,
     last_modified_by: String,
     entry: E,
-    entry_id: String,
+    // entry_id: String,
     discarded: bool,
     version: u32,
     last_modified: DateTime,
