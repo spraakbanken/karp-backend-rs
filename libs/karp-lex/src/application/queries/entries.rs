@@ -5,7 +5,7 @@ use crate::DateTime;
 pub struct EntryDto<E> {
     // #[serde(alias = "entity_id")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub entity_id: Option<ulid::Ulid>,
+    pub id: Option<ulid::Ulid>,
     // #[serde(alias = "last_modified_by")]
     pub last_modified_by: String,
     pub entry: E,
